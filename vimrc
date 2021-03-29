@@ -131,6 +131,8 @@ let g:NERDToggleCheckAllLines = 1
 
 
 " ================vim airline========================
+" 在.vim下面创建autoload和plugin。
+" 把airline和theme下面对应的autoload和plugin复制到刚创建的文件夹下面
 " 选择主题
 let g:airline_theme='bubblegum'
 " 设置超级状态栏
