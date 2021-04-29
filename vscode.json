@@ -1,0 +1,124 @@
+{
+    "search.followSymlinks": false,
+    "python.envFile":"${workspaceFolder}/.env",
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 18,
+    "editor.fontFamily": "Courier New",
+    "files.autoSave": "onWindowChange",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Python27\\python.exe",
+    "editor.suggestSelection": "first",
+    "python.formatting.provider": "yapf",
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
+    "python.languageServer": "Pylance",
+    "editor.renderControlCharacters": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "C:\\Python27\\Scripts\\flake8.exe",
+    "workbench.activityBar.visible": true,
+    "editor.formatOnType": true,
+    "extensions.ignoreRecommendations": false,
+    "search.useIgnoreFiles": true,
+    "python.analysis.cacheFolderPath": "H:\\vscode\\cache",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/*.pyc": true,
+        "**/.DS_Store": true,
+        "**/*.h": false,
+        "**/*.cpp": false,
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/*.sd": true,
+        "**/*.so": true,
+        "**/*.lib": true,
+        "**/*.log": true,
+        "**/*.zip": true,
+        "**/*.pyc": true,
+        "**/*.pyx": true,
+        "**/.svn": true,
+        "**/*.json": true,
+        "**.hg": true,
+        "**.git": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    },
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    "editor.formatOnSaveMode": "modifications",
+    "remote.SSH.remotePlatform": {
+        "192.168.47.225": "linux"
+    },
+    "fileHeaderComment.parameter":{
+        "*":{
+            "author": "zoujing@corp.netease.com",
+            "tab": "    ",
+            "company": "Netease Corporation",
+
+            "Python_comment_begin": "\"\"\"",
+            "Python_comment_end": "\"\"\"",
+
+            "C_comment_begin": "/*",
+            "C_comment_end": "*/",
+
+            "C++_comment": "//",
+        }
+    },
+    "fileHeaderComment.template":{
+        "Python":[
+            "# -*- coding: utf-8 -*-",
+            "${Python_comment_begin}----------------------------------------------------------------------------",
+            "Author:",
+            "${tab}${author}",
+            "Date:",
+            "${tab}${datetime24h}",
+            "Description:",
+            "${tab}${filename}",
+            "History:",
+            "${tab}${datetime24h}, create file",
+            "----------------------------------------------------------------------------${Python_comment_end}",
+            "from __future__ import absolute_import",
+        ],
+        "C":[
+            "${C_comment_begin}----------------------------------------------------------------------------",
+            "Author:",
+            "${tab}${author}",
+            "Date:",
+            "${tab}${date}",
+            "Description:",
+            "${tab}${filename}",
+            "History:",
+            "${tab}${date}, create file",
+            "----------------------------------------------------------------------------${C_comment_end}",
+        ],
+        "C++":[
+            "${C++_comment}----------------------------------------------------------------------------",
+            "${C++_comment} Author:",
+            "${C++_comment}${tab}${author}",
+            "${C++_comment} Date:",
+            "${C++_comment}${tab}${date}",
+            "${C++_comment} Description:",
+            "${C++_comment}${tab}${filename}",
+            "${C++_comment} History:",
+            "${C++_comment}${tab}${date}, create file",
+            "${C++_comment}----------------------------------------------------------------------------",
+            "#ifndef ${filename}",
+            "#define ${filename}",
+            "#endif // ${filename}"
+        ]
+    },
+    "autoDocstring.startOnNewLine": true,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.colorTheme": "Visual Studio Dark"
+}
