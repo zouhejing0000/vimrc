@@ -14,7 +14,7 @@ syntax on
 " 插件支持
 filetype plugin indent on
 " 字体
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14:cANSI
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 " 启用256色 
 set t_Co=256
 " 设置光标所在行高亮
@@ -114,50 +114,50 @@ autocmd filetype python set colorcolumn=80
 
 " ================Vundle========================
 filetype off
-set rtp+=/home/zoujing/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" 包管理
-Plugin 'VundleVim/Vundle.vim'
+" set rtp+=/home/zoujing/.vim/bundle/Vundle.vim
+" call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " 智能注释
-Plugin 'preservim/nerdcommenter'
+Plug 'https://hub.fastgit.org/preservim/nerdcommenter'
 
 " 状态栏
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'powerline/fonts'
+Plug 'https://hub.fastgit.org/vim-airline/vim-airline'
+Plug 'https://hub.fastgit.org/vim-airline/vim-airline-themes'
+Plug 'https://hub.fastgit.org/powerline/fonts'
 
 " 主题
-Plugin 'tomasr/molokai'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'jnurmine/Zenburn'
-" Plugin 'junegunn/seoul256'
+Plug 'https://hub.fastgit.org/tomasr/molokai'
+Plug 'https://hub.fastgit.org/chriskempson/vim-tomorrow-theme'
+Plug 'https://hub.fastgit.org/jnurmine/Zenburn'
+" Plug 'junegunn/seoul256'
 
 " 文件管理器
-Plugin 'preservim/nerdtree'
+Plug 'https://hub.fastgit.org/preservim/nerdtree'
 
 " 快速查找
-Plugin 'Yggdroot/LeaderF'
+Plug 'https://hub.fastgit.org/Yggdroot/LeaderF'
 
 " vim-surround
-Plugin 'tpope/vim-surround'
+Plug 'https://hub.fastgit.org/tpope/vim-surround'
 
 " pep8
-Plugin 'dense-analysis/ale'
+Plug 'https://hub.fastgit.org/dense-analysis/ale'
 
 " yapf
-Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+Plug 'https://hub.fastgit.org/google/yapf', { 'rtp': 'plugins/vim' }
 
 
 " YouCompleteMe
-Plugin 'ycm-core/YouCompleteMe'
+Plug 'https://hub.fastgit.org/ycm-core/YouCompleteMe'
 
 " Syntastic
-Plugin 'vim-syntastic/syntastic'
+Plug 'https://hub.fastgit.org/vim-syntastic/syntastic'
 
 
-call vundle#end()
+" call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
 
@@ -180,25 +180,25 @@ let g:NERDToggleCheckAllLines = 1
 " 在.vim下面创建autoload和plugin。
 " 把airline和theme下面对应的autoload和plugin复制到刚创建的文件夹下面
 " " 设置超级状态栏
-" if !exists('g:airline_symbols')
-"    let g:airline_symbols = {}
-" endif
-" let g:airline#extensions#whitespace#enabled = 1
-" let g:airline_powerline_fonts = 1
-" " 选择主题
-" let g:airline_theme='bubblegum'
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = ''
-"
-" " ================主题========================
-" " 把molokai从bundle/molokai/.../molokai.vim挪到.vim/colors下面
-" let g:molokai_original = 1
-" let g:rehash256 = 1
+if !exists('g:airline_symbols')
+   let g:airline_symbols = {}
+endif
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline_powerline_fonts = 1
+" 选择主题
+let g:airline_theme='bubblegum'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" ================主题========================
+" 把molokai从bundle/molokai/.../molokai.vim挪到.vim/colors下面
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 " ================NERD Tree========================
 " nnoremap <leader>n :NERDTreeFocus<CR>
@@ -321,7 +321,10 @@ imap <C-Y> <c-o>:call yapf#YAPF()<cr>
 
 " ================ycm========================
 " 目录中发现.ycm_extra_conf.py文件时直接加载, 不需要确认.
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 1
+let g:ycm_global_ycm_extra_conf = '/home/zoujing/.ycm_extra_conf.py'
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = '-std=c++17 -stdlib=libc++'
 " 设置跳转
 nnoremap <leader>d :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_insertion = 1
